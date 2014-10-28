@@ -34,7 +34,7 @@ cuisines = Cuisine.create([
   {cuisine_name:'Thai'}
   ]),
 
-  ingredients = Ingredient.create([
+ingredients = Ingredient.create([
   {ingredient_name: '1% chocolate low-fat milk'},
   {ingredient_name: '1% low-fat buttermilk'},
   {ingredient_name: '1% low-fat chocolate milk'},

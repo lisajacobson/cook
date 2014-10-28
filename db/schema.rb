@@ -11,13 +11,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141028010400) do
+ActiveRecord::Schema.define(version: 20141028163014) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "cuisines", force: true do |t|
     t.string "cuisine_name"
+  end
+
+  create_table "cuisines_recipes", id: false, force: true do |t|
+    t.integer "cuisine_id"
+    t.integer "recipe_id"
   end
 
   create_table "ingredients", force: true do |t|
@@ -49,6 +54,8 @@ ActiveRecord::Schema.define(version: 20141028010400) do
     t.inet     "last_sign_in_ip"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "first_name"
+    t.string   "last_name"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
