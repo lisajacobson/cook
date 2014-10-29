@@ -1,12 +1,25 @@
 <header>
 
-  <div class="left_header">
+  <div class="title_header">
     <h1> <%= link_to 'What Can iCook', '/' %> </h1>
   </div>
 
-  <main>
-    <ul class="options">
+  <nav>
+    <ul>
+      <% if user_signed_in? %>
+        <li class="entypo-home">Home</li>
+        <li class="entypo-docs">Favorite Ingredients</li>
+        <li class="entypo-book-open">My Saved Recipes</li>
+        <li class="entypo-logout"><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
+      <% else %>
+        <li><%= link_to "Sign in", new_user_session_path %></li>
+        <li><%= link_to "Sign up", new_user_registration_path %></li> 
+      <% end %>
+    </ul>
+  </nav>
 
+  <!-- <main>
+    <ul class="options">
       <% if user_signed_in? %>
         <li><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
       <% else %>
@@ -14,6 +27,6 @@
         <li><%= link_to "Sign up", new_user_registration_path %></li> 
       <% end %>
     </ul>
-  </main>
+  </main> -->
 
 </header>
