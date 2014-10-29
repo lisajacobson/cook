@@ -1,18 +1,26 @@
-<%= form_tag("/search", method: "get") do %>
+<form method="get">
  
-<div class="container">
-  <h2><%= label_tag(:q, "What Do iHave? | Select your Ingredients") %></h2>
+  <div class="container">
+    <h2><%= label_tag(:q, "What Do iHave? | Select your Ingredients") %></h2>
 
-    <select>
-    <% @ingredients.each do |i| %>
-      <option>
-      <%= i.ingredient_name %>
-      </option>
-    <%end%>
-  </select>
-  
-  <%= submit_tag("Search for Recipes") %>
+      <select name="ingredients[]" multiple >
+      <% @ingredients.each do |i| %>
+        <option value="<%= i.id %>">
+        <%= i.ingredient_name %>
+        </option>
+      <%end%>
+    </select>
+    
+    <button type="submit">Search for Recipes</button>
+  </div>
 
-</div>
+  <div class="chosen_ingredients">
+    <h2>Chosen Ingredients</h2>
+    <ul>
+     <% @results.each do |r| %>
+        <li><%= r %></li>
+      <%end%>
+    </ul>
+  </div>
 
-<% end %>
+</form>

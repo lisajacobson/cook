@@ -3,7 +3,8 @@ class IngredientsController < ApplicationController
   before_action :authenticate_user!
 
   def index
-    @ingredients = Ingredient.all  
+    @ingredients = Ingredient.all
+    @results = params[:ingredients]
   end
 
   def new
@@ -31,7 +32,8 @@ class IngredientsController < ApplicationController
   end
 
   def show
-    populate_ingredient
+    #populate_ingredient
+
   end
 
   def destroy
@@ -40,10 +42,13 @@ class IngredientsController < ApplicationController
     redirect_to root_path
   end
 
+#if ingredients are specified in params, run search function, otherwise display option to search (form again)
+#basic search form sinatra
+
 private
 
   def populate_ingredient
-    @ingredient = Ingredient.find( params[:id])
+    @results = Ingredient.find( params[:id])
   end
 
   def ingredient_params
