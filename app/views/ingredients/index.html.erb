@@ -1,1 +1,21 @@
-Hello World
+
+
+<%= form_tag("/search", method: "get") do %>
+ 
+<div class="container">
+  <h2><%= label_tag(:q, "What Do iHave? | Select your Ingredients") %></h2>
+
+    <% @ingredients.each do |i| %>
+     <label>
+      <%= check_box_tag(:ingredient_name)%>
+
+      <%= i.ingredient_name %>
+         <br>
+    </label>
+    <%end%>
+  
+  <%= submit_tag("Search for Recipes") %>
+
+</div>
+
+<% end %>

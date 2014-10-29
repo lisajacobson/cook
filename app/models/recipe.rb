@@ -3,10 +3,10 @@ class Recipe < ActiveRecord::Base
   validates :servings, numericality: true
   validates :servings, numericality: true 
 
-  belongs_to :user, :list
+  belongs_to :user 
+  belongs_to :list
   has_many :ingredients
-  has_many_and_belongs_to :cuisines
+  has_and_belongs_to_many :cuisines
 
-  before_action :authenticate_user!
 
 end

@@ -11,14 +11,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141028163014) do
+ActiveRecord::Schema.define(version: 20141028201939) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "cuisines", force: true do |t|
-    t.string "cuisine_name"
+    t.string  "cuisine_name"
+    t.integer "user_id"
   end
+
+  add_index "cuisines", ["user_id"], name: "index_cuisines_on_user_id", using: :btree
 
   create_table "cuisines_recipes", id: false, force: true do |t|
     t.integer "cuisine_id"
@@ -26,12 +29,18 @@ ActiveRecord::Schema.define(version: 20141028163014) do
   end
 
   create_table "ingredients", force: true do |t|
-    t.string "ingredient_name"
+    t.string  "ingredient_name"
+    t.integer "recipe_id"
   end
 
+  add_index "ingredients", ["recipe_id"], name: "index_ingredients_on_recipe_id", using: :btree
+
   create_table "lists", force: true do |t|
-    t.string "list_name"
+    t.string  "list_name"
+    t.integer "user_id"
   end
+
+  add_index "lists", ["user_id"], name: "index_lists_on_user_id", using: :btree
 
   create_table "recipes", force: true do |t|
     t.string  "recipe_name"
@@ -39,7 +48,12 @@ ActiveRecord::Schema.define(version: 20141028163014) do
     t.integer "total_time"
     t.integer "servings"
     t.string  "image"
+    t.integer "list_id"
+    t.integer "user_id"
   end
+
+  add_index "recipes", ["list_id"], name: "index_recipes_on_list_id", using: :btree
+  add_index "recipes", ["user_id"], name: "index_recipes_on_user_id", using: :btree
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false

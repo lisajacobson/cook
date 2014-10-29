@@ -5,34 +5,7 @@
   #
   #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
   #   Mayor.create(name: 'Emanuel', city: cities.first)
-
-cuisines = Cuisine.create([
-  {cuisine_name:'American'},
-  {cuisine_name:'Asian'},
-  {cuisine_name:'Barbecue'},
-  {cuisine_name:'Cajun & Creole'},
-  {cuisine_name:'Chinese'},
-  {cuisine_name:'Cuban'},
-  {cuisine_name:'English'},
-  {cuisine_name:'French'},
-  {cuisine_name:'German'},
-  {cuisine_name:'Greek'},
-  {cuisine_name:'Hawaiian'},
-  {cuisine_name:'Hungarian'},
-  {cuisine_name:'Indian'},
-  {cuisine_name:'Irish'},
-  {cuisine_name:'Italian'},
-  {cuisine_name:'Japanese'},
-  {cuisine_name:'Mediterranean'},
-  {cuisine_name:'Mexican'},
-  {cuisine_name:'Moroccan'},
-  {cuisine_name:'Portuguese'},
-  {cuisine_name:'Southern & Soul Food'},
-  {cuisine_name:'Southwestern'},
-  {cuisine_name:'Spanish'},
-  {cuisine_name:'Swedish'},
-  {cuisine_name:'Thai'}
-  ]),
+Ingredient.destroy_all
 
 ingredients = Ingredient.create([
   {ingredient_name: '1% chocolate low-fat milk'},
@@ -53,7 +26,7 @@ ingredients = Ingredient.create([
   {ingredient_name: '50% reduced sodium black beans'},
   {ingredient_name: '7 Up'},
   {ingredient_name: '8th Continent Original Light Soymilk'},
-  {ingredient_name: 'a√±ejo rum'},
+  {ingredient_name: 'añejo rum'},
   {ingredient_name: 'abalone'},
   {ingredient_name: 'abbamele'},
   {ingredient_name: 'abita amber'},
@@ -7334,3 +7307,33 @@ ingredients = Ingredient.create([
   {ingredient_name: 'zoom quick hot cereal'},
   {ingredient_name: 'zucchini'},
   {ingredient_name: 'zwieback'}])
+
+Cuisine.destroy_all
+
+cuisines = Cuisine.create([
+  {cuisine_name:'American'},
+  {cuisine_name:'Asian'},
+  {cuisine_name:'Barbecue'},
+  {cuisine_name:'Cajun & Creole'},
+  {cuisine_name:'Chinese'},
+  {cuisine_name:'Cuban'},
+  {cuisine_name:'English'},
+  {cuisine_name:'French'},
+  {cuisine_name:'German'},
+  {cuisine_name:'Greek'},
+  {cuisine_name:'Hawaiian'},
+  {cuisine_name:'Hungarian'},
+  {cuisine_name:'Indian'},
+  {cuisine_name:'Irish'},
+  {cuisine_name:'Italian'},
+  {cuisine_name:'Japanese'},
+  {cuisine_name:'Mediterranean'},
+  {cuisine_name:'Mexican'},
+  {cuisine_name:'Moroccan'},
+  {cuisine_name:'Portuguese'},
+  {cuisine_name:'Southern & Soul Food'},
+  {cuisine_name:'Southwestern'},
+  {cuisine_name:'Spanish'},
+  {cuisine_name:'Swedish'},
+  {cuisine_name:'Thai'}
+  ])

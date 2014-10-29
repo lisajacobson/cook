@@ -3,9 +3,8 @@ class User < ActiveRecord::Base
   # :confirmable, :lockable, :timeoutable and :omniauthable
   
   has_many :recipes
-  has_many :ingredients, through: :recipes
   has_many :cuisines
-  has_and_belongs_to_many :lists
+  has_many :lists
 
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
