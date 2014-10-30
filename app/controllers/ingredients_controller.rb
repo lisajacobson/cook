@@ -6,7 +6,7 @@ class IngredientsController < ApplicationController
     @ingredients = Ingredient.all
     if params[:ingredients]
       @results = params[:ingredients].map do |r|
-      Ingredient.find(r).ingredient_name
+      Ingredient.find(r)
       end
     end
     @result_id = params[:ingredients]
