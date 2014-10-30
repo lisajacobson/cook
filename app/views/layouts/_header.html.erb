@@ -5,17 +5,39 @@
   </div>
 
   <nav>
-    <ul>
-      <% if user_signed_in? %>
-        <li class="entypo-home">Home</li>
-        <li class="entypo-docs">Favorite Ingredients</li>
-        <li class="entypo-book-open">My Saved Recipes</li>
-        <li class="entypo-logout"><%= link_to "Logout", destroy_user_session_path, :method => :delete %></li>
-      <% else %>
-        <li><%= link_to "Sign in", new_user_session_path %></li>
-        <li><%= link_to "Sign up", new_user_registration_path %></li> 
-      <% end %>
-    </ul>
-  </nav>
+    <div class="wrap">
+      <ul class="drawers">
+        <% if user_signed_in? %>
+          <li class="contents entypo-home">
+            Home
+            <div class="drawer">
+              <span class="handle"></span>
+            </div>
+          </li>
 
+          <li class="contents entypo-docs">
+            Favorite Ingredients
+             <div class="drawer">
+              <span class="handle"></span>
+          </li>
+
+          <li class="contents entypo-book-open">
+            My Saved Recipes
+             <div class="drawer">
+              <span class="handle"></span>
+          </li>
+          
+          <li class="contents entypo-logout">
+            <%= link_to "Logout", destroy_user_session_path, :method => :delete %>
+              <div class="drawer">
+                <span class="handle"></span>
+          </li>
+
+        <% else %>
+          <li><%= link_to "Sign in", new_user_session_path %></li>
+          <li><%= link_to "Sign up", new_user_registration_path %></li> 
+        <% end %>
+      </ul>
+    </div>
+  </nav>
 </header>
