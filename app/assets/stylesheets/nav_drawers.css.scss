@@ -5,6 +5,7 @@
   margin: 30px auto ;
   width: 600px;
   padding: 50px 0;
+  background-image: url(assets/images/retina_wood.png);
 }
 
 .drawers {
@@ -23,7 +24,8 @@
 }
 
 .drawer {
-  background-image: linear-gradient(#f9ebb7 3%, #e4c695 4%, #d6a867);
+  // background-image: linear-gradient(#f9ebb7 3%, #e4c695 4%, #d6a867);
+  background-image: url(assets/images/retina_wood.png);
   width: 100px;
   height: 45px;
   transition: .5s ease-out all;
@@ -65,7 +67,7 @@ ul.drawers li:hover .drawer {
 }
 
 .wrap, .drawer:after {
-  background: tan;
+  background: url(/assets/retina_wood.png);
 }
 
 .contents {
@@ -80,8 +82,8 @@ ul.drawers li:hover .drawer {
   -webkit-animation-fill-mode: both;
   -moz-animation-fill-mode: both;
   -o-animation-fill-mode: both;
-  animation-fill-mode: both;
-  animation-name: fadeOutDown;
+  -webkit-animation-fill-mode: forwards;
+  // animation-name: fadeOutDown;
 }
 
 ul.drawers li:hover .contents {
