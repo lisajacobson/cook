@@ -26,16 +26,17 @@ nav{
   background-image: url(/assets/retina_wood.png);
   width: 100%;
   height: 50px;
+  padding-top: 1.5px;
+  text-align: center;
   ul{
-    // position: relative;
     height: 100%;
+    padding-left: 10px;
     li{
-      // position: absolute;
-      margin-top: 30px;
       border: 3px solid #2B1A0B;
       border-style: outset;
-      // width: 25%;
+      padding: 0 1em;
       display: inline;
+      margin: 0 10px 50px 0;
     }   
   }
 }
@@ -87,94 +88,57 @@ form{
     top: 50%;
     left: 50%;
     margin: 20px 0 0 -300px;
+    color: silver;
+    h2{
+      margin-left: 145px;
+      padding-top: 40px;
+      margin-bottom: 2px;
+      color: silver;
+    }
+    .field-top, .field-bottom{
+      margin-left: 50px;
+    }
+    .field-bottom{
+      margin-top: 10px;
+    }
+    .remember{
+      margin-left: 45px;
+    }
   }
 }
 
+.devise-links{
+  div{
+    margin-left: 50px;
+  }
+  .signup{
+    margin-left: 40px;
+  }
+}
 
-// .container{
-//   margin:80px auto;
-//   width: 60px;
-//   height: 60px;
-//   position:relative;
-//   transform-origin:center bottom;
-//   animation-name: flicker;
-//   animation-duration:3ms;
-//   animation-delay:20ms;
-//   animation-timing-function: ease-in;
-//   animation-iteration-count: infinite;
-//   animation-direction: alternate;
-// }
+.pan_plus_flame{
+  height: 1000px;
+}
 
-// .flame{
-//   bottom:0;
-//   position:absolute;
-//   border-bottom-right-radius: 50%;
-//   border-bottom-left-radius: 50%;
-//   border-top-left-radius: 50%;
-//   transform:rotate(-45deg) scale(1.5,1.5);
-// }
-
-// .yellow{
-//   left:15px; 
-//   width: 30px;
-//   height: 30px;
-//   background:gold;
-//   box-shadow: 0px 0px 9px 4px gold;
-// }
-
-// .orange{
-//   left:10px; 
-//   width: 40px;
-//   height: 40px;
-//   background:orange;
-//   box-shadow: 0px 0px 9px 4px orange;
-// }
-
-// .red{
-//   left:5px;
-//   width: 50px;
-//   height: 50px;
-//   background:OrangeRed;
-//   box-shadow: 0px 0px 5px 4px OrangeRed;
-// }
-
-// .white{
-//   left:15px; 
-//   bottom:-4px;
-//   width: 30px;
-//   height: 30px;
-//   background:white;
-//   box-shadow: 0px 0px 9px 4px white;
-// }
-
-// .circle{
-//   border-radius: 50%;
-//   position:absolute;  
-// }
-
-// .blue{
-//   width: 10px;
-//   height: 10px;
-//   left:25px;
-//   bottom:-25px; 
-//   background: SlateBlue;
-//   box-shadow: 0px 0px 15px 10px SlateBlue;
-// }
-
-// .black{
-//   width: 40px;
-//   height: 40px;
-//   left:10px;
-//   bottom:-60px;  
-//   background: black;
-//   box-shadow: 0px 0px 15px 10px black;
-// }
-
-// @keyframes flicker{
-//   0%   {transform: rotate(-1deg);}
-//   20%  {transform: rotate(1deg);}
-//   40%  {transform: rotate(-1deg);}
-//   60%  {transform: rotate(1deg) scaleY(1.18);}
-//   80%  {transform: rotate(-2deg) scaleY(0.62);}
-//   100% {transform: rotate(1deg);}
-// }
+.user-form{
+  input[type="text"],
+  input[type="email"],
+  input[type="password"]{
+    text-align: center;
+    border-radius: 5px;
+  }
+  label{
+    float: none;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+  input[type="submit"]{
+    margin-left: 80px;
+    border-radius: 50px;
+    padding: 3px;
+    margin-top: 5px;
+    width: 60px;
+    height: 20px;    
+  }
+}

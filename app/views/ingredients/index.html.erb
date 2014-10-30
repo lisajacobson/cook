@@ -11,16 +11,28 @@
       <%end%>
     </select>
     
-    <button type="submit">Search for Recipes</button>
+    <button type="submit">Choose Ingredients</button>
   </div>
 
   <div class="chosen_ingredients">
     <h2>Chosen Ingredients</h2>
     <ul>
-     <% @results.each do |r| %>
-        <li><%= r %></li>
+      <% if @results %>
+        <% @results.each do |r| %>
+          <li><%= r %></li>
+        <%end%>
       <%end%>
     </ul>
+
+    <button class="search_recipes">Search for Recipes</button>
+
   </div>
 
 </form>
+
+<div class="recipes">
+  
+  <!-- ajax goes here -->
+
+
+</div>

@@ -4,7 +4,11 @@ class IngredientsController < ApplicationController
 
   def index
     @ingredients = Ingredient.all
-    @results = params[:ingredients]
+    if params[:ingredients]
+      @results = params[:ingredients].map do |r|
+      Ingredient.find(r).ingredient_name
+      end
+    end
   end
 
   def new
