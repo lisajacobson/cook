@@ -9,6 +9,7 @@ class IngredientsController < ApplicationController
       Ingredient.find(r).ingredient_name
       end
     end
+    @result_id = params[:ingredients]
   end
 
   def new

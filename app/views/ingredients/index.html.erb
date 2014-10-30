@@ -1,4 +1,4 @@
-<form method="get">
+<form>
  
   <div class="container">
     <h2><%= label_tag(:q, "What Do iHave? | Select your Ingredients") %></h2>
@@ -14,12 +14,16 @@
     <button type="submit">Choose Ingredients</button>
   </div>
 
+</form>
+
+<form class="recipe-search-form">
+
   <div class="chosen_ingredients">
     <h2>Chosen Ingredients</h2>
     <ul>
       <% if @results %>
         <% @results.each do |r| %>
-          <li><%= r %></li>
+          <li class="search_term" data-id="<%@result_id%>"><%= r %></li>
         <%end%>
       <%end%>
     </ul>
@@ -32,7 +36,7 @@
 
 <div class="recipes">
   
-  <!-- ajax goes here -->
+  <!-- ajax api results goes here -->
 
 
 </div>

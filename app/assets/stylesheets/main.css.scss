@@ -22,6 +22,15 @@ h1{
   padding-top: 20px;
 }
 
+.box{
+  border:1px solid red;
+  width:1000px;
+  height:300px;
+  margin:auto;
+  position:relative;
+  text-align:center;
+}
+
 // nav{
 //   background-image: url(/assets/retina_wood.png);
 //   width: 100%;
@@ -117,7 +126,7 @@ form{
 }
 
 .pan_plus_flame{
-  height: 1000px;
+  height: 400px;
 }
 
 .user-form{

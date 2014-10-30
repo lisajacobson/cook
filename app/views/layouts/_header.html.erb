@@ -19,18 +19,21 @@
             Favorite Ingredients
              <div class="drawer">
               <span class="handle"></span>
+              </div>
           </li>
 
           <li class="contents entypo-book-open">
             My Saved Recipes
              <div class="drawer">
               <span class="handle"></span>
+            </div>
           </li>
           
           <li class="contents entypo-logout">
             <%= link_to "Logout", destroy_user_session_path, :method => :delete %>
               <div class="drawer">
                 <span class="handle"></span>
+              </div>
           </li>
 
         <% else %>
