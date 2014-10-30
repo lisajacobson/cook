@@ -11,11 +11,24 @@ $(document).ready(function(){
 //
 
 $('form#recipe_search').bind("ajax:success", function(event, data, status, xhr){
-  // var data = 'foodfoodfood'
   console.log(data);
+
   // for each data item in json
+  for (var i = 0; i < data.matches.length ; i++) {
+  
+  var spaces = encodeURIComponent(value).replace(/%20/g,'+')
+  var google_link = encodeURIComponent('http://google.com/?q=" + ')
+
+  
+    var linkhttp://google.com/?q=' + 'data.matches[i].recipeName)');
+
+    $('.show-recipe').append(
+      '<li>' + '<a href="google_link">' + data.matches[i].recipeName + '</a>' + data.matches[i].recipeName + '<img src="' + data.matches[i].smallImageUrls[0] + '">' + '<p>' + 'rating: ' + 
+      data.matches[i].rating + '</p></li>'
+      );
+  };
   //   generate <li> with data
-  $('.show-recipe').html(data);
+
 })
 
 //WHAT I WANT TO SHOW FROM RECIPE

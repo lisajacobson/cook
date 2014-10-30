@@ -43,16 +43,16 @@
             <% allowed_ingredients += term_chunk + search_term %>  
             <%end%>
           <%end%>
-        <% limit = '&maxResult=50' %>
-        <% recipesUrl += allowed_ingredients + limit%>
+        <% limit = '&maxResult=300' %>
+        <% recipesUrl += allowed_ingredients + limit %>
     
         <%= button_to 'Search', recipesUrl, remote: true, method: 'get', form: {id: "recipe_search"} %>
 
 
-<div class="recipes">
-  
-  <ul class="show-recipe">
+  <div class="recipes">
     
-  </ul>
+    <ul class="show-recipe">
+      
+    </ul>
 
-</div>
+  </div>

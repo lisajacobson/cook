@@ -95,12 +95,12 @@ form{
     height: 292px;
     padding: 20px;
     top: 50%;
-    left: 50%;
+    left: 58%;
     margin: 20px 0 0 -300px;
     color: silver;
     h2{
-      margin-left: 145px;
-      padding-top: 40px;
+      margin-left: 50px;
+      padding-top: 35px;
       margin-bottom: 2px;
       color: silver;
     }
@@ -112,6 +112,10 @@ form{
     }
     .remember{
       margin-left: 45px;
+    }
+    .form1{
+      left: 0px;
+      margin-left: -190px;
     }
   }
 }

@@ -38,7 +38,10 @@ class IngredientsController < ApplicationController
 
   def show
     #populate_ingredient
+  end
 
+  def splash
+    
   end
 
   def destroy

@@ -8,22 +8,22 @@
     <div class="wrap">
       <ul class="drawers">
         <% if user_signed_in? %>
-          <li class="contents entypo-home">
-            Home
+          <li class="contents entypo-flashlight">
+            <%= link_to "Search", root_path %>
             <div class="drawer">
               <span class="handle"></span>
             </div>
           </li>
 
-          <li class="contents entypo-docs">
-            Favorite Ingredients
+         <li class="contents entypo-info">
+           <%= link_to "About", about_path %>
              <div class="drawer">
               <span class="handle"></span>
               </div>
           </li>
 
           <li class="contents entypo-book-open">
-            My Saved Recipes
+            <%= link_to "Saved Recipes", new_ingredient_path %>
              <div class="drawer">
               <span class="handle"></span>
             </div>
