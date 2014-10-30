@@ -33,6 +33,8 @@ group :test, :development do
   gem 'rspec-rails'
 end 
 
+gem 'autoprefixer-rails'
+
 # group :test do
 #   gem 'shoulda'
 # end
