@@ -1,12 +1,11 @@
-#iCook
-====
+#What Can iCook
 
-## GA WDI DC August 2014, Project 3
+### GA WDI DC August 2014, Project 3
 
-##Overview
+###Overview
 **iCook** is a cooking app that gives you recipes you can make based on ingredients you already have. It was developed as a sample Rails project for the August 2014 Web Development Immersive course at General Assembly. It was developed over a one week sprint to model the agile software development process.
 
-##Technologies Used
+###Technologies Used
 * Ruby 2.1.1
 * Ruby on Rails 4.1.1
 * Yummly API
@@ -17,7 +16,7 @@
 * Javascript
 * Custom styling with CSS3 and HTML5
 
-## User Stories Completed
+###User Stories Completed
 * As a user I can: 
   * register for an account
   * sign in
@@ -31,13 +30,13 @@
     * recipe photo
   * click on a recipe name 
 
-##Backlog
-A full list of user stories can be found by looking at this Pivitol Tracker
+###Backlog
+A full list of user stories can be found by looking at [this Pivitol Tracker Project](https://www.pivotaltracker.com/s/projects/1195886)
 
-##ERD 
+###ERD 
 ![](app/assets/images/WhatCaniCook.png)
 
-##Local Setup
+###Local Setup
     rake db:create
     bundle install
     rake db:migrate
@@ -47,5 +46,5 @@ A full list of user stories can be found by looking at this Pivitol Tracker
     Open the page locally on http://localhost:3000.
     Note that you will need to request access token and an API key for the Yummly API and replace them as appropriate within the code.
 
-=
+---
 ######Written by Lisa Snider
