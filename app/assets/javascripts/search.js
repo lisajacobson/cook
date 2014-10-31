@@ -26,7 +26,7 @@ $('form#recipe_search').bind("ajax:success", function(event, data, status, xhr){
   };
 
     $('.show-recipe').append(
-      '<li>' + '<a href=' + link + '>' + data.matches[i].recipeName + '</a><br /><img src="' + data.matches[i].smallImageUrls[0] + '">' + '<p>' + 'rating: ' + 
+     '<li>' + '<a href=' + link + '>' + data.matches[i].recipeName + '</a><br /><img src="' + data.matches[i].smallImageUrls[0] + '">' + '<p>' + 'rating: ' + 
       data.matches[i].rating + '</p></li>'
       );
   };
