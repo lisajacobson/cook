@@ -12,7 +12,8 @@
 * RSpec Rails gem for RSpec testing 
 * Shoulda-matchers gem for testing
 * PostgreSQL Database
-* Devise gem for authentication and authorization.
+* Devise gem for authentication and authorization
+* Autoprefixer gem to make CSS animations work
 * Javascript
 * Custom styling with CSS3 and HTML5
 
