@@ -24,7 +24,7 @@ h1{
 }
 
 .box{
-  border:1px solid red;
+  border:nonef;
   width:1000px;
   height: 100%;
   margin:auto;
@@ -147,7 +147,9 @@ form{
 .user-form{
   input[type="text"],
   input[type="email"],
-  input[type="password"]{
+  input[type="password"],
+  input[type="first_name"],
+  input[type="last_name"]{
     text-align: center;
     border-radius: 5px;
   }
