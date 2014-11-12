@@ -16,8 +16,16 @@ $('#submit').click(function(evt){
 //loop thru the child elements in the chosen-choices ul 
 var content = $('.search-choice');
 content.each(function(){
-  console.log(encodeURI($(this).text().replace(/^\s+|\s+$/g,'')));
+  
+  var query = (encodeURI($(this).text().replace(/^\s+|\s+$/g,'')));
+  console.log(query);
+
+  var link = 'http://google.com/?q=' + query + '#q=' + query;
+  console.log(link);
+
 });
+  
+  recipesUrl = 'http://api.yummly.com/v1/api/recipes?_app_id=c8af64b9&_app_key=9b4d56a0e813fed791c590821441f01a'
 
   //get the text of each of those
   //do same logic from lines 30-40 in JS, adding &allowedIngredient[]= before each URI encoded ingredient
