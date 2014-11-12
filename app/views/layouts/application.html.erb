@@ -12,13 +12,11 @@
 <body>
 
   <%= render 'layouts/header' %>
-
+  <p class="notice"><%= notice %></p>
+  <p class="alert"><%= alert %></p>
+    
     <div class="pan_plus_flame box">
       <%= yield %>
-
-      <p class="notice"><%= notice %></p>
-      <p class="alert"><%= alert %></p>
-
       <div class="firepit">
         <div class="fire">
           <div class="flame"></div>
