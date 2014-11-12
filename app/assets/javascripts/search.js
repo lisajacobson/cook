@@ -22,7 +22,7 @@ $('form#recipe_search').bind("ajax:success", function(event, data, status, xhr){
   var link = 'http://google.com/?q=' + query;
 
   if (!data.matches[i].smallImageUrls[0]){
-     data.matches[i].smallImageUrls[0] = ''
+     data.matches[i].smallImageUrls[0] = url('assets/images/generic_recipe.png');
   };
 
     $('.show-recipe').append(

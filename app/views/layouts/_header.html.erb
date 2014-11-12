@@ -7,6 +7,7 @@
   <nav>
     <div class="wrap">
       <ul class="drawers">
+
         <% if user_signed_in? %>
           <li class="contents entypo-flashlight">
             <%= link_to "Search", root_path %>
@@ -37,10 +38,18 @@
           </li>
 
         <% else %>
-          <li><%= link_to "Sign in", new_user_session_path %></li>
-          <li><%= link_to "Sign up", new_user_registration_path %></li> 
+          <li class="contents entypo-login"><%= link_to " Sign in", new_user_session_path %>
+            <div class="drawer">
+              <span class="handle"></span>
+            </div>
+          </li>
+          <li class="contents entypo-user-add"><%= link_to " Sign up", new_user_registration_path %>
+             <div class="drawer">
+              <span class="handle"></span>
+            </div>
+          </li> 
         <% end %>
-      </ul>
+      </ul> 
     </div>
   </nav>
 </header>
