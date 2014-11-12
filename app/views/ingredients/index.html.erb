@@ -3,7 +3,9 @@
   <div class="container">
     <h2><%= label_tag(:q, "What Do iHave? | Select your Ingredients") %></h2>
 
-      <select name="ingredients[]" multiple >
+<!--       <select name="ingredients[]" multiple > -->      
+        
+    <select class="chosen" multiple="true">
       <% @ingredients.each do |i| %>
         <option value="<%= i.id %>">
         <%= i.ingredient_name %>
