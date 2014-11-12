@@ -10,6 +10,16 @@ $(document).ready(function(){
 //Don’t forget to URL-encode parameter names and values (i.e., [ and ] become %5B and %5D).
 //
 
+// $('#submit').click(function(evt){
+//   evt.preventDefault();
+//   debugger
+// })
+
+
+//loop thru the child elements in the chosen-choices ul  
+  //get the text of each of those
+  //do same logic from lines 30-40 in JS, adding &allowedIngredient[]= before each URI encoded ingredient
+
 $('form#recipe_search').bind("ajax:success", function(event, data, status, xhr){
   console.log(data);
 
@@ -19,10 +29,10 @@ $('form#recipe_search').bind("ajax:success", function(event, data, status, xhr){
   // var spaces = data.matches[i].recipeName().replace('/%20/g','+');
 
   var query = encodeURIComponent(data.matches[i].recipeName);
-  var link = 'http://google.com/?q=' + query;
+  var link = 'http://google.com/?q=' + query + '#q=' + query;
 
   if (!data.matches[i].smallImageUrls[0]){
-     data.matches[i].smallImageUrls[0] = url('assets/images/generic_recipe.png');
+     data.matches[i].smallImageUrls[0] = ''
   };
 
     $('.show-recipe').append(
