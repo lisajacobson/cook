@@ -10,15 +10,19 @@ $(document).ready(function(){
 //Don’t forget to URL-encode parameter names and values (i.e., [ and ] become %5B and %5D).
 //
 
-// $('#submit').click(function(evt){
-//   evt.preventDefault();
-//   debugger
-// })
+$('#submit').click(function(evt){
+  evt.preventDefault();
 
+//loop thru the child elements in the chosen-choices ul 
+var content = $('.search-choice');
+content.each(function(){
+  console.log(encodeURI($(this).text()));
+});
 
-//loop thru the child elements in the chosen-choices ul  
   //get the text of each of those
   //do same logic from lines 30-40 in JS, adding &allowedIngredient[]= before each URI encoded ingredient
+
+})
 
 $('form#recipe_search').bind("ajax:success", function(event, data, status, xhr){
   console.log(data);
