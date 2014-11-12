@@ -16,7 +16,7 @@ $('#submit').click(function(evt){
 //loop thru the child elements in the chosen-choices ul 
 var content = $('.search-choice');
 content.each(function(){
-  console.log(encodeURI($(this).text()));
+  console.log(encodeURI($(this).text().replace(/^\s+|\s+$/g,'')));
 });
 
   //get the text of each of those
