@@ -14,23 +14,56 @@ $('#submit').click(function(evt){
   evt.preventDefault();
 
 //loop thru the child elements in the chosen-choices ul 
+  
+  var recipesUrl = 'http://api.yummly.com/v1/api/recipes?_app_id=c8af64b9&_app_key=9b4d56a0e813fed791c590821441f01a';
+
 var content = $('.search-choice');
-content.each(function(){
+  content.each(function(){
   
   var query = (encodeURI($(this).text().replace(/^\s+|\s+$/g,'')));
   console.log(query);
 
-  var link = 'http://google.com/?q=' + query + '#q=' + query;
-  console.log(link);
-
-});
+  term_chunk = '&allowedIngredient[]=' + query;
   
-  recipesUrl = 'http://api.yummly.com/v1/api/recipes?_app_id=c8af64b9&_app_key=9b4d56a0e813fed791c590821441f01a'
+  recipesUrl += term_chunk;
+});
+
+  recipesUrl += '&maxResult=300';
+  $.ajax({
+    url: recipesUrl,
+    dataType: 'json',
+    method: 'GET',
+    success: function(data){
+      console.log(data);
+
+    for (var i = 0; i < data.matches.length ; i++) {
+  
+  // var spaces = data.matches[i].recipeName().replace('/%20/g','+');
+
+
+if (data.matches[i].smallImageUrls == undefined){
+  imgSource = '';
+} else {
+  imgSource = "<img src=" + data.matches[i].smallImageUrls[0] + ">";
+};      
+
+  var query = encodeURIComponent(data.matches[i].recipeName);
+  var link = 'http://google.com/?q=' + query + '#q=' + query;
+
+    $('.show-recipe').append(
+     '<li>' + '<a href=' + link + '>' + data.matches[i].recipeName + '</a><br />' + imgSource + '<p>' + 'rating: ' + 
+      data.matches[i].rating + '</p></li>'
+      );
+  };
+    }
+  });
+}); 
+  
 
   //get the text of each of those
   //do same logic from lines 30-40 in JS, adding &allowedIngredient[]= before each URI encoded ingredient
 
-})
+
 
 $('form#recipe_search').bind("ajax:success", function(event, data, status, xhr){
   console.log(data);
