@@ -1,5 +1,4 @@
 <form>
- 
   <div class="container">
     <h2><%= label_tag(:q, "What Do iHave?") %></h2>    
         
@@ -14,33 +13,6 @@
     <button id="submit">Search for Recipes</button>
   </div>
 </form>
-
-<form class="recipe-search-form">
-    <h2 class="chosen_ingredients">Chosen Ingredients</h2>
-    <ul>
-      <% if @results.present? %>
-        <% @results.each do |r| %>
-          <li class="search_term" data-id="<%=URI::encode(r.ingredient_name)%>"><%= r.ingredient_name %></li>
-        <%end%>
-
-      <%end%>
-    </ul>
-</form>
-
-<% recipesUrl = 'http://api.yummly.com/v1/api/recipes?_app_id=c8af64b9&_app_key=9b4d56a0e813fed791c590821441f01a' %>
-        <% allowed_ingredients = '' %>
-          <% if @results.present? %>
-            <% @results.each do |r| %>
-            <% term_chunk = '&allowedIngredient[]=' %>
-            <% search_term = URI::encode(r.ingredient_name) %>
-            <% allowed_ingredients += term_chunk + search_term %>  
-            <%end%>
-          <%end%>
-        <% limit = '&maxResult=300' %>
-        <% recipesUrl += allowed_ingredients + limit %>
-    
-        <%= button_to 'Search', recipesUrl, remote: true, method: 'get', form: {id: "recipe_search"} %>
-
 
   <div class="recipes">
     <h2>Recipes You Can Cook</h2>
