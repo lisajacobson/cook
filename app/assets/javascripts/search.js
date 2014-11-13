@@ -17,7 +17,7 @@ $('#submit').click(function(evt){
   
   var recipesUrl = 'http://api.yummly.com/v1/api/recipes?_app_id=c8af64b9&_app_key=9b4d56a0e813fed791c590821441f01a';
 
-var content = $('.search-choice');
+  var content = $('.search-choice');
   content.each(function(){
   
   var query = (encodeURI($(this).text().replace(/^\s+|\s+$/g,'')));
@@ -29,34 +29,30 @@ var content = $('.search-choice');
 });
 
   recipesUrl += '&maxResult=300';
-  $.ajax({
-    url: recipesUrl,
-    dataType: 'json',
-    method: 'GET',
-    success: function(data){
+    $.ajax({
+      url: recipesUrl,
+      dataType: 'json',
+      method: 'GET',
+      success: function(data){
       console.log(data);
 
-    for (var i = 0; i < data.matches.length ; i++) {
-  
-  // var spaces = data.matches[i].recipeName().replace('/%20/g','+');
+        for (var i = 0; i < data.matches.length ; i++) {
 
+          if (data.matches[i].smallImageUrls == undefined){
+            imgSource = '';
+          } else {
+          imgSource = "<img src=" + data.matches[i].smallImageUrls[0] + ">";
+        };      
 
-if (data.matches[i].smallImageUrls == undefined){
-  imgSource = '';
-} else {
-  imgSource = "<img src=" + data.matches[i].smallImageUrls[0] + ">";
-};      
+          var query = encodeURIComponent(data.matches[i].recipeName);
+          var link = 'http://google.com/?q=' + query + '#q=' + query;
 
-  var query = encodeURIComponent(data.matches[i].recipeName);
-  var link = 'http://google.com/?q=' + query + '#q=' + query;
-
-    $('.show-recipe').append(
-     '<li>' + '<a href=' + link + '>' + data.matches[i].recipeName + '</a><br />' + imgSource + '<p>' + 'rating: ' + 
-      data.matches[i].rating + '</p></li>'
-      );
-  };
-    }
-  });
+          $('.show-recipe').append(
+            '<li>' + '<a href=' + link + '>' + data.matches[i].recipeName + '</a><br />' + imgSource + '<p>' + 'rating: ' + data.matches[i].rating + '</p></li>'
+          );
+        };  
+      }   
+    });
 }); 
   
 
