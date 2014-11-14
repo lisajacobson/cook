@@ -29,10 +29,10 @@ h1{
 }
 
 .box{
-  border:nonef;
+  border:none;
   width:1000px;
   height: 100%;
-  margin:auto;
+  // margin:auto;
   position:relative;
   text-align:center;
 }
@@ -57,8 +57,7 @@ h1{
 // }
 
 .container{
-  float: left;
-  margin-top: 20px;
+  // float: left;
   width: 350px;
 }
 
@@ -71,6 +70,10 @@ h1{
   h2{
     padding-left: 18px;
   }
+}
+
+.chosen{
+  visibility: hidden;
 }
 
 header{
@@ -106,6 +109,10 @@ form{
   list-style-type: none;
 }
 
+.rating{
+  margin-top: 0px;
+}
+
 .fridge{
   position: relative;
   .inner_fridge{
@@ -139,6 +146,11 @@ form{
     }
   }
 }
+
+// .ihave{
+//   width: 30%;
+//   text-align: center;
+// }
 
 .devise-links{
   div{

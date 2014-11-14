@@ -1,7 +1,6 @@
-<form>
+<form class="ihave">
   <div class="container">
-    <h2><%= label_tag(:q, "What Do iHave?") %></h2>    
-        
+    <h2>What Do iHave?</h2>          
     <select data-placeholder="Choose Ingredient(s)" class="chosen" multiple="true">
       <% @ingredients.each do |i| %>
         <option value="<%= i.id %>">
