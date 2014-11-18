@@ -80,12 +80,16 @@ form{
 
 .result{
   display: inline-block;
+  margin: 0 2em;
+  img{
+    margin: 0 auto;
+  }
 }
 
 .result:hover{
-    border: 5px solid #6E83CF;
+    border: 3px solid #9FDD98;
     border-radius: .5em;
-    background-color: #9FDD98;
+    background-color: #5BC8AD;
   }
 
 .show-recipe{
