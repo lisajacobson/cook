@@ -82,6 +82,12 @@ form{
   display: inline-block;
 }
 
+.result:hover{
+    border: 5px solid #6E83CF;
+    border-radius: .5em;
+    background-color: #9FDD98;
+  }
+
 .show-recipe{
   list-style-type: none;
 }

@@ -41,13 +41,13 @@ $('#submit').click(function(evt){
             imgSource = '';
           } else {
           imgSource = "<img src=" + data.matches[i].smallImageUrls[0] + ">";
-        };      
+        };         
 
           var query = encodeURIComponent(data.matches[i].recipeName);
           var link = 'http://google.com/?q=' + query + '#q=' + query;
 
           $('.show-recipe').append(
-            '<li class="result">' + '<a href=' + link + '>' + data.matches[i].recipeName + '</a><br />' + imgSource + '<p class="rating">' + 'rating: ' + data.matches[i].rating + '</p></li>'
+            '<li class="result curl">' + '<a href=' + link + '>' + data.matches[i].recipeName + '</a><br />' + imgSource + '<p class="rating">' + 'rating: ' + data.matches[i].rating + '</p></li>'
           );
         };  
       }   
