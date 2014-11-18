@@ -37,30 +37,9 @@ h1{
   text-align:center;
 }
 
-// nav{
-//   background-image: url(/assets/retina_wood.png);
-//   width: 100%;
-//   height: 50px;
-//   padding-top: 1.5px;
-//   text-align: center;
-  // ul{
-  //   height: 100%;
-  //   padding-left: 10px;
-  //   li{
-  //     border: 3px solid #2B1A0B;
-  //     border-style: outset;
-  //     padding: 0 1em;
-  //     display: inline;
-  //     margin: 0 10px 50px 0;
-  //   }   
-  // }
-// }
-
 .container{
-  // float: left;
-  width: 350px;
+  width: 100%;
 }
-
 
 .chosen_ingredients{
   float: right;
@@ -89,20 +68,18 @@ form{
   margin: 0 auto;
 }
 
-// .options{
-//   ul{
-//     width: 100%;
-//   }
-// }
-
-
 .recipes{
   height: 2000px;
-  float: right;
-  width: 400px;
+  width: 75%;
+  margin: 0 auto;
+  padding-top: 2em;
   h2{
     text-align: center;
   }
+}
+
+.result{
+  display: inline-block;
 }
 
 .show-recipe{
@@ -147,10 +124,20 @@ form{
   }
 }
 
-// .ihave{
-//   width: 30%;
-//   text-align: center;
-// }
+.ihave{
+  // width: 600px;
+  text-align: center;
+  // padding-left: 25%;
+  button{
+    display: block;
+    margin: 0 auto;
+    margin-top: 1em;
+    padding: 3px;
+    width: 10em;
+    height: 2em; 
+    border-radius: 20px;
+  }
+}
 
 .devise-links{
   div{
@@ -163,6 +150,7 @@ form{
 
 .pan_plus_flame{
   height: 400px;
+  margin: 0 auto;
 }
 
 .user-form{

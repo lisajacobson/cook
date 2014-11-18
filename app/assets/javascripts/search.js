@@ -47,7 +47,7 @@ $('#submit').click(function(evt){
           var link = 'http://google.com/?q=' + query + '#q=' + query;
 
           $('.show-recipe').append(
-            '<li>' + '<a href=' + link + '>' + data.matches[i].recipeName + '</a><br />' + imgSource + '<p class="rating">' + 'rating: ' + data.matches[i].rating + '</p></li>'
+            '<li class="result">' + '<a href=' + link + '>' + data.matches[i].recipeName + '</a><br />' + imgSource + '<p class="rating">' + 'rating: ' + data.matches[i].rating + '</p></li>'
           );
         };  
       }   

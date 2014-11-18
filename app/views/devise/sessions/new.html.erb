@@ -1,25 +1,48 @@
-<div class="fridge">
-  <div class="inner_fridge">
+<div class="pan_plus_flame box">
 
-    <div class="form1">
-      <h2>Sign in</h2>
+    <div class="fridge">
+      <div class="inner_fridge">
 
-      <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-        
-        <div class="field-top">
-        <%= f.email_field :email, placeholder: 'email', autofocus: true %></div>
+        <div class="form1">
+          <h2>Sign in</h2>
 
-        <div class="field-bottom">
-          <%= f.password_field :password, placeholder: 'Password', autocomplete: "off" %></div>
+          <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+            
+            <div class="field-top">
+            <%= f.email_field :email, placeholder: 'email', autofocus: true %></div>
 
-        <% if devise_mapping.rememberable? -%>
-          <div class="remember"><%= f.check_box :remember_me %> <%= f.label :remember_me %></div>
-        <% end -%>
+            <div class="field-bottom">
+              <%= f.password_field :password, placeholder: 'Password', autocomplete: "off" %></div>
 
-        <div class="submit_button"><%= f.submit "Log in" %></div>
-      <% end %>
+            <% if devise_mapping.rememberable? -%>
+              <div class="remember"><%= f.check_box :remember_me %> <%= f.label :remember_me %></div>
+            <% end -%>
 
-      <%= render "devise/shared/links" %>
+            <div class="submit_button"><%= f.submit "Log in" %></div>
+          <% end %>
+
+          <%= render "devise/shared/links" %>
+        </div>
+      </div>
+    </div>
+
+<div class="firepit">
+    <div class="fire">
+      <div class="flame"></div>
+      <div class="flame"></div>
+      <div class="flame"></div>
+      <div class="flame"></div>
+      <div class="spark"></div>
+      <div class="spark"></div>
+      <div class="spark"></div>
+      <div class="spark"></div>
+      <div class="spark"></div>
+      <div class="spark"></div>
+      <div class="spark"></div>
+      <div class="spark"></div>
+      <div class="spark"></div>
+      <div class="spark"></div>
+      <div class="spark"></div>
     </div>
   </div>
 </div>

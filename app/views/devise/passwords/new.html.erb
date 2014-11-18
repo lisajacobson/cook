@@ -1,19 +1,41 @@
-<div class="fridge">
-  <div class="inner_fridge">
-    <div class="form1">
+<div class="pan_plus_flame box">
+  <div class="fridge">
+    <div class="inner_fridge">
+      <div class="form1">
 
-      <h2>Forgot your password?</h2>
+        <h2>Forgot your password?</h2>
 
-        <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
-            <%= devise_error_messages! %>
+          <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
+              <%= devise_error_messages! %>
 
-            <div class="field-top"><%= f.label :email %><br />
-            <%= f.email_field :email, autofocus: true %></div>
+              <div class="field-top"><%= f.label :email %><br />
+              <%= f.email_field :email, autofocus: true %></div>
 
-            <div class="submit-button"><%= f.submit "Send me reset password instructions" %></div>
-        <% end %>
+              <div class="submit-button"><%= f.submit "Send me reset password instructions" %></div>
+          <% end %>
 
-      <%= render "devise/shared/links" %>
+        <%= render "devise/shared/links" %>
+      </div>
+    </div>
+  </div>
+
+  <div class="firepit">
+    <div class="fire">
+      <div class="flame"></div>
+      <div class="flame"></div>
+      <div class="flame"></div>
+      <div class="flame"></div>
+      <div class="spark"></div>
+      <div class="spark"></div>
+      <div class="spark"></div>
+      <div class="spark"></div>
+      <div class="spark"></div>
+      <div class="spark"></div>
+      <div class="spark"></div>
+      <div class="spark"></div>
+      <div class="spark"></div>
+      <div class="spark"></div>
+      <div class="spark"></div>
     </div>
   </div>
 </div>

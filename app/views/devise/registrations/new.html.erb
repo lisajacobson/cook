@@ -1,30 +1,52 @@
-<div class="fridge">
+<div class="pan_plus_flame box"> 
+  <div class="fridge">
 
-  <div class="inner_fridge">
-    <div class="user_form form1">
-      <h2>Sign up</h2>
+    <div class="inner_fridge">
+      <div class="user_form form1">
+        <h2>Sign up</h2>
 
-        <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-        <%= devise_error_messages! %>
+          <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+          <%= devise_error_messages! %>
 
-        <div class="field-top">
-        <%= f.text_field :first_name, placeholder: 'first name', autofocus: true %></div>
+          <div class="field-top">
+          <%= f.text_field :first_name, placeholder: 'first name', autofocus: true %></div>
 
-        <div class="field-bottom">
-        <%= f.text_field :last_name, placeholder: 'last name', autofocus: true %></div>
+          <div class="field-bottom">
+          <%= f.text_field :last_name, placeholder: 'last name', autofocus: true %></div>
 
-        <div>
-        <%= f.email_field :email, placeholder: 'email', autofocus: true %></div>
+          <div>
+          <%= f.email_field :email, placeholder: 'email', autofocus: true %></div>
 
-        <div><% if @validatable %><i>(<%= @minimum_password_length %> characters minimum)</i><% end %>
-          <%= f.password_field :password, placeholder: 'password', autocomplete: "off" %></div>
+          <div><% if @validatable %><i>(<%= @minimum_password_length %> characters minimum)</i><% end %>
+            <%= f.password_field :password, placeholder: 'password', autocomplete: "off" %></div>
 
-        <div><%= f.password_field :password_confirmation, placeholder: 'confirm password', autocomplete: "off" %></div>
+          <div><%= f.password_field :password_confirmation, placeholder: 'confirm password', autocomplete: "off" %></div>
 
-        <div class="submit-button"><%= f.submit "Sign up" %></div>
-      <% end %>
+          <div class="submit-button"><%= f.submit "Sign up" %></div>
+        <% end %>
 
-      <%= render "devise/shared/links" %>
+        <%= render "devise/shared/links" %>
+      </div>
+    </div>
+  </div>
+
+  <div class="firepit">
+    <div class="fire">
+      <div class="flame"></div>
+      <div class="flame"></div>
+      <div class="flame"></div>
+      <div class="flame"></div>
+      <div class="spark"></div>
+      <div class="spark"></div>
+      <div class="spark"></div>
+      <div class="spark"></div>
+      <div class="spark"></div>
+      <div class="spark"></div>
+      <div class="spark"></div>
+      <div class="spark"></div>
+      <div class="spark"></div>
+      <div class="spark"></div>
+      <div class="spark"></div>
     </div>
   </div>
 </div>
