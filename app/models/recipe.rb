@@ -1,7 +1,7 @@
 class Recipe < ActiveRecord::Base
 
-  validates :servings, numericality: true
-  validates :servings, numericality: true 
+  # validates :servings, numericality: true
+  # validates :servings, numericality: true 
 
   belongs_to :user 
   belongs_to :list
