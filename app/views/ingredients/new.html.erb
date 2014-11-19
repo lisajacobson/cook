@@ -1,7 +1,14 @@
-<h2><%= label_tag(:q, "iLove These Recipes") %></h2>
-<ul>
-<% @recipes.each do |r|%>
-  <li><%= r.recipe_name %>
-  <%= r.source_url %></li>
-<% end %>
+<div class="recipes">
+  <h2>iLove These Recipes</h2>
+    <ul class="saved-recipe">
+      <% @recipes.each do |r|%>
+        <li><a href="<%= r.source_url %>"><%= r.recipe_name %></a></li>
+        <img src="<%= r.image %>">
+        <%= r.servings %>
+        <%= r.total_time %>
+    <% end %>
+
+    </ul>
+</div>
+  
 </ul>

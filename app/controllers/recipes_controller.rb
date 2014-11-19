@@ -5,10 +5,22 @@ class RecipesController < ApplicationController
 
     @recipe = Recipe.new(recipe_params)
     @recipe.user_id = current_user.id
+
+    # if Recipe.exists?(:user_id current_user.id)
+    #   @recipe.save
+    # end
+
     if @recipe.save
       respond_to do |format|
         format.html {redirect_to new_ingredient_path}
         format.json {render json: @recipe}
+      end
+    else
+      respond_to do |format|
+        format.html { render :new }
+        format.json { 
+          render :json => { :errors => @recipe.errors.full_messages, :status => 422}      
+        }
       end
     end
 

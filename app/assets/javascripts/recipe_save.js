@@ -10,7 +10,9 @@ $(document).ready(function(){
     console.log(link);
     var img = $(this).find("img").eq(0).attr("src");
     console.log(img);
-    
+    var rating = $(this).find("p").eq(0).attr("class");
+    console.log(rating);
+
     $.ajax({
       url: '/recipes',
       dataType: 'json',
