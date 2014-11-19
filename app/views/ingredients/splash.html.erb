@@ -1,6 +1,27 @@
+<div class="about">
 
+  <h2>What this App is all About</h2>
 
-<h2>You Are What You Eat</h2>
+  <p>This app is based on the need of the urban-dwelling twentysomething with lots of ideas but fewer material resources. Often, I find myself hungry for a meal but lacking the necessary ingredients. I've got the drive to whip up something tasty, for me and or a friend, but get overwhelmed by the tyranny of choice at my neighborhood grocery store. (That's psychologist Barry Schwartz' definition for the near-paralyzing effect of abundant choices.) After talking to friends and family, and one (marvelous cook of a) cousin in particular, I noticed there was a gap in the market. There are recipe finders and particular online cooking magazines galore, but none very comprehensive and thus not super useful. And who wants to go out and buy a whole new set of ingredients when you already have some random ones in the cupboard?</p>
 
-<h3>"Der Mensch ist, was er ißt."</h3>
-<h4>Ludwig Andreas Feuerbach, <em>Concerning Spiritualism and Materialism</em> (1863)</h4>
+  <p>After some idea incubation in my mind, I decided to build an app that solved this problem: an app that gives you recipes to make based on ingredients you <em>already</em> have!</p>
+
+  <div class="how">
+    <h3>The How-To</h3>  
+      <ol>
+        <li>Click on the <%= link_to "Search", root_path %> drawer above</li>
+        <li>Type into the search bar an ingredient, choose it from the drop-down menu and hit enter. If you'd like to search for recipes based on multiple ingredients, simply type another word, rinse and repeat, once you've chosen your first ingredient.</li>
+        <li>Click "Search for recipes"</li>
+        <li>To view the recipe, click on the recipe name. Note: because of the limited scope of the API, where the recipe data comes from, this will take you to the Google search page for that recipe.</li>
+        <li>To save a recipe, click on the image or area around the image.</li>
+        <li>To view your saved recipes, click <%= link_to "Saved Recipes", new_ingredient_path %></li>
+      </ol>
+  </div>
+
+  <p>Several drafts of entity relationship diagramming later, I was on my way to building this app. For the nerdy programmers among you, here's the source code of iCook on Github, and be sure to check out the oh-so-snazzy README, as well. Bon Apetit!</p>
+
+    <h2>You Are What You Eat <strong>+</strong> You are your choices <strong>=</strong> 
+    <h3 class="sources">(Feuerbach/1863) + (Seneca/~50CE)</h3>
+    <h2><%= link_to 'iCook', root_path %></h2>
+
+</div>

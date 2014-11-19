@@ -1,14 +1,9 @@
 class RecipesController < ApplicationController
 
   def create
-    # unless Recipe.exists?(user_id: current_user.id, name = recipe_params[:recipe_name], image = recipe_params[:image], link = recipe_params[:source_url])
 
     @recipe = Recipe.new(recipe_params)
     @recipe.user_id = current_user.id
-
-    # if Recipe.exists?(:user_id current_user.id)
-    #   @recipe.save
-    # end
 
     if @recipe.save
       respond_to do |format|
@@ -23,10 +18,6 @@ class RecipesController < ApplicationController
         }
       end
     end
-
-    # @recipe = Recipe.create(recipe_params)  
-    # render :json => @recipe
-    # redirect_to 'ingredients#new'
   end
 
 private
