@@ -2,6 +2,7 @@ Rails.application.routes.draw do
 
   devise_for :users
   resources :ingredients
+  resources :recipes, only: [:create, :show]
 
   root to: "ingredients#index"
   # The priority is based upon order of creation: first created -> highest priority.
