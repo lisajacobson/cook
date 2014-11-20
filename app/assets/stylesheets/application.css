@@ -12,6 +12,9 @@
  *
  *= require_tree .
  *= require_self
+ *= require_main.css.scss
  */
 
- @import 'main.css.scss'
+@import "main.css.scss"
+@import "chosen.css"
+@import "nav_drawers.css.scss"
