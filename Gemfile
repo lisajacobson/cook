@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+# gem 'ruby', '~> 2.1.1'
+
 gem 'figaro'
 
 gem 'devise'
@@ -37,6 +39,7 @@ end
 
 gem 'autoprefixer-rails'
 
+gem 'rails_12factor', group: :production
 # group :test do
 #   gem 'shoulda'
 # end
