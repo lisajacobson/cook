@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+gem 'chosen-rails'
 gem 'ruby'
 gem 'figaro'
 
