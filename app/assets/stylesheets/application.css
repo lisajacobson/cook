@@ -13,6 +13,8 @@
  *= require_tree .
  *= require_self
  *= require_main.css.scss
+ *= require_chosen.css
+ *= require_nav_drawers.css.scss
  */
 
 @import "main.css.scss"
