@@ -19,11 +19,12 @@ $(document).ready(function(){
       method: 'POST',
       data: {recipe: {recipe_name: name, image: img, source_url: link }},
       success: function(data){
-        if (data.errors){
-          alert('Recipe could not be saved. Try refreshing the page, searching and saving again.');
-      } else {
-        alert('recipe saved!');
+        console.log('saved');
       }
-    });
+    })
+
+    // send image, name, link to the controller
+
   });
+
 })
