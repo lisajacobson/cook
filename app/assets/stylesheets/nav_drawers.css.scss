@@ -27,7 +27,7 @@
 
 .drawer {
   // background-image: linear-gradient(#f9ebb7 3%, #e4c695 4%, #d6a867);
-  background-image: url(assets/images/retina_wood.png);
+  background-image: url('http://i.imgur.com/i16JW59.png');
   width: 100px;
   height: 45px;
   transition: .5s ease-out all;
@@ -69,7 +69,7 @@ ul.drawers li:hover .drawer {
 }
 
 .wrap, .drawer:after {
-  background: url(/assets/retina_wood.png);
+  background: url('http://i.imgur.com/i16JW59.png');
 }
 
 .contents {

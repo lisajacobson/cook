@@ -1,7 +1,6 @@
 source 'https://rubygems.org'
 
 gem 'ruby'
-
 gem 'figaro'
 
 gem 'devise'
