@@ -3,6 +3,7 @@ source 'https://rubygems.org'
 gem 'chosen_assets'
 gem 'chosen-rails'
 gem 'ruby'
+
 gem 'figaro'
 
 gem 'devise'
@@ -40,7 +41,6 @@ end
 
 gem 'autoprefixer-rails'
 
-gem 'rails_12factor', group: :production
 # group :test do
 #   gem 'shoulda'
 # end
