@@ -2,7 +2,7 @@ class RecipesController < ApplicationController
 
   def create
 
-    @recipe = Recipe.new(recipe_params)
+    @recipe = Recipe.new(recipe_params).merge
     @recipe.user_id = current_user.id
 
     if @recipe.save
@@ -22,7 +22,7 @@ class RecipesController < ApplicationController
 
 private
   def recipe_params
-    params.require(:recipe).permit(:user_id, :recipe_name, :image, :servings, :total_time, :source_url)
+    params.require(:recipe).permit(:recipe_name, :image, :servings, :total_time, :source_url)
   end
 
 end
