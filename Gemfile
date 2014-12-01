@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'ruby'
+# gem 'ruby', '~> 2.1.1'
 
 gem 'figaro'
 
