@@ -2,8 +2,8 @@ class RecipesController < ApplicationController
 
   def create
 
-    @recipe = Recipe.new(recipe_params).merge
-    @recipe.user_id = current_user.id
+    @recipe = Recipe.new(recipe_params).merge(user_id: current_user.id)
+    # @recipe.user_id = current_user.id
 
     if @recipe.save
       respond_to do |format|
