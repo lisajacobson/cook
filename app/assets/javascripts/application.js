@@ -13,4 +13,4 @@
 //= require jquery
 //= require jquery_ujs
 //= require_tree .
-//= require chosen/chosen.jquery.js 
+//= require chosen-jquery
