@@ -1,0 +1,19 @@
+<form class="ihave">
+<!--   <div class="container"> -->
+    <h2>What Do iHave?</h2>          
+    <select data-placeholder="Choose Ingredient(s)" class="chosen" multiple="true">
+      <% @ingredients.each do |i| %>
+        <option value="<%= i.id %>">
+        <%= i.ingredient_name %>
+        </option>
+      <%end%>
+    </select>
+    
+    <button id="submit">Search for Recipes</button>
+<!--   </div> -->
+</form>
+
+  <div class="recipes">
+    <h2>Recipes You Can Cook</h2>
+      <ul class="show-recipe"></ul>
+  </div>
