@@ -13,7 +13,7 @@ $(document).ready(function(){
 $('#submit').click(function(evt){
   evt.preventDefault();
 
-  var recipesUrl = 'https://api.yummly.com/v1/api/recipes?_app_id=c8af64b9&_app_key=9b4d56a0e813fed791c590821441f01a';
+  var recipesUrl = 'https://www.api.yummly.com/v1/api/recipes?_app_id=c8af64b9&_app_key=9b4d56a0e813fed791c590821441f01a';
   
   //loop thru the child elements in the chosen-choices ul 
   var content = $('.search-choice');
