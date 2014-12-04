@@ -44,7 +44,7 @@ $('#submit').click(function(evt){
         };         
 
           var query = encodeURIComponent(data.matches[i].recipeName);
-          var link = 'http://google.com/?q=' + query + '#q=' + query;
+          var link = 'https://google.com/?q=' + query + '#q=' + query;
 
           $('.show-recipe').append(
             '<li class="result curl-top-right" name="' + data.matches[i].recipeName + '">' + '<a href=' + link + '>' + data.matches[i].recipeName + '</a><br />' + imgSource + '<p class="rating">' + 'rating: ' + data.matches[i].rating + '</p></li>'
