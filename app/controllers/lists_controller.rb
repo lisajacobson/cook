@@ -1,3 +1,3 @@
-class ListController < ApplicationController
+class ListsController < ApplicationController
 
 end

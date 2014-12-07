@@ -1,3 +1,3 @@
-class UserController < ActionController::Base
+class UsersController < ActionController::Base
 
 end
